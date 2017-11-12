@@ -5,9 +5,9 @@ A Space Invaders clone using HTML canvas.
 Currently has:
 - a blank canvas to draw in
 - an alien swarm moving about the canvas
+- a player moving with arrow keys
 
 To add:
-- player
 - bullets
 
 ## To run

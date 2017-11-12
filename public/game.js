@@ -16,5 +16,7 @@ function draw() {
   swarm.move();
   swarm.draw();
 
+  player.draw();
+
   window.requestAnimationFrame(draw);
 }
