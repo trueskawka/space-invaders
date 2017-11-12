@@ -6,9 +6,15 @@ Currently has:
 - a blank canvas to draw in
 - an alien swarm moving about the canvas
 - a player moving with arrow keys
+- player bullets being shot with spacebar
 
 To add:
-- bullets
+- collision checks for player bullets
+- sprites for aliens
+- sprite for player
+- alien bullets
+- collision checks for alien bullets
+- walls for player
 
 ## To run
 

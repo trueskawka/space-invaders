@@ -25,16 +25,3 @@ class Player {
 }
 
 var player = new Player(190, 550);
-
-window.addEventListener('keydown', this.control, false);
-function control(e) {
-  var code = e.keyCode;
-
-  if (code == 37) {
-    player.moveX(-1 * player.v);
-    player.draw();
-  } else if (code == 39) {
-    player.moveX(1 * player.v);
-    player.draw();
-  } 
-}
