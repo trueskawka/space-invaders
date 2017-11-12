@@ -6,9 +6,11 @@ class Alien {
     this.y = y;
     this.width = 10;
     this.height = 10;
+    this.hit = false;
   }
 
   draw() {
+    if (this.hit) return;
     ctx.fillStyle = alienColour;
     ctx.fillRect(this.x, this.y, this.width, this.height);
   }

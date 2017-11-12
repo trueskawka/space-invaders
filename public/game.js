@@ -40,4 +40,5 @@ function draw() {
   });
 
   window.requestAnimationFrame(draw);
+  collisionCheck();
 }

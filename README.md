@@ -7,9 +7,9 @@ Currently has:
 - an alien swarm moving about the canvas
 - a player moving with arrow keys
 - player bullets being shot with spacebar
+- ability to kill some aliens
 
 To add:
-- collision checks for player bullets
 - sprites for aliens
 - sprite for player
 - alien bullets
