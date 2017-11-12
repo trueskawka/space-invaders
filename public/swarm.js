@@ -58,7 +58,12 @@ class Swarm {
       for (var nx = 0; nx < this.nX; nx++) {
         var x = this.x + nx * 10 + this.alienSpaceX * nx;
         var y = this.y + ny * 10 + this.alienSpaceY * ny;
-        var alien = new Alien(x, y);
+        if (ny > 2) {
+          var alien_sprite = alien_tall;
+        } else {
+          var alien_sprite = alien_chub;
+        }
+        var alien = new Alien(x, y, alien_sprite);
         aliensRow.push(alien);
       }
       this.aliens.push(aliensRow);

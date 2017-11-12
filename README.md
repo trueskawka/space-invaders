@@ -4,13 +4,13 @@ A Space Invaders clone using HTML canvas.
 
 Currently has:
 - a blank canvas to draw in
+- cute little alien sprites
 - an alien swarm moving about the canvas
 - a player moving with arrow keys
 - player bullets being shot with spacebar
 - ability to kill some aliens
 
 To add:
-- sprites for aliens
 - sprite for player
 - alien bullets
 - collision checks for alien bullets
