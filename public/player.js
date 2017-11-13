@@ -1,12 +1,11 @@
-var playerColour = 'rgb(0, 200, 0)',
-    playerSpeed = 5;
+var playerSpeed = 5;
 
 class Player {
   constructor(x,y) {
     this.x = x;
     this.y = y;
-    this.width = 20;
-    this.height = 10;
+    this.width = player_sprite.width;
+    this.height = player_sprite.height;
     this.v = playerSpeed;
   }
 
@@ -19,8 +18,9 @@ class Player {
   }
 
   draw() {
-    ctx.fillStyle = playerColour;
-    ctx.fillRect(this.x, this.y, this.width, this.height);
+    ctx.drawImage(sprites,
+      player_sprite.x, player_sprite.y, player_sprite.width, player_sprite.height,
+      this.x, this.y, this.width, this.height);
   }
 }
 
