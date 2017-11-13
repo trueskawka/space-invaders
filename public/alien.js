@@ -10,8 +10,14 @@ class Alien {
 
   draw() {
     if (this.hit) return;
-    ctx.drawImage(sprites,
-      this.alien.x, this.alien.y, this.alien.width, this.alien.height,
-      this.x, this.y, this.width, this.height);
+    if (currentFrame < frames / 2) {
+      ctx.drawImage(sprites,
+        this.alien.x, this.alien.y, this.alien.width, this.alien.height,
+        this.x, this.y, this.width, this.height);
+    } else {
+      ctx.drawImage(sprites,
+        this.alien.x2, this.alien.y2, this.alien.width, this.alien.height,
+        this.x, this.y, this.width, this.height);
+    }
   }
 }

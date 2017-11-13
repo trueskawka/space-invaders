@@ -5,8 +5,8 @@ function collisionCheck() {
     return bullet.y - bullet.height > 0;
   });
 
-  var alienWidth = 10;
-  var alienHeight = 10;
+  var alienWidth = 22;
+  var alienHeight = 16;
 
   var removeBullets = [];
 

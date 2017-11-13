@@ -1,5 +1,5 @@
 var sprites = new Image();
-sprites.src = "./sprites/spritesheet.png";
+sprites.src = "./sprites/spritesheet2.png";
 
 class Sprite {
   constructor(x, y, x2, y2, width, height) {
@@ -12,5 +12,5 @@ class Sprite {
   }
 }
 
-var alien_chub = new Sprite(0, 0, 17, 0, 11, 8);
-var alien_tall = new Sprite(32, 0, 48, 0, 8, 8);
+var alien_chub = new Sprite(0, 0, 32, 0, 22, 16);
+var alien_tall = new Sprite(64, 0, 96, 0, 16, 16);

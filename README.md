@@ -11,6 +11,7 @@ Currently has:
 - ability to kill some aliens
 
 To add:
+- improve collision detection to take into account alien size
 - sprite for player
 - alien bullets
 - collision checks for alien bullets

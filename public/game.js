@@ -1,6 +1,8 @@
 var contextWidth = 400,
     contextHeight = 600;
 var ctx;
+var frames = 60,
+    currentFrame = 0;
 
 function init() {
   ctx = document.getElementById('game').getContext('2d');
@@ -41,4 +43,10 @@ function draw() {
 
   window.requestAnimationFrame(draw);
   collisionCheck();
+
+  if (currentFrame == frames) {
+    currentFrame = 0;
+  } else {
+    currentFrame++;
+  }
 }

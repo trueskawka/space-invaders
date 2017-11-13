@@ -10,10 +10,10 @@ class Swarm {
     this.direction = 1;
     this.nX = 10;
     this.nY = 5;
-    this.alienSpaceX = 14;
+    this.alienSpaceX = 4;
     this.alienSpaceY = 10;
-    this.width = (this.nX - 1) * this.alienSpaceX + 10 * this.nX;
-    this.height = (this.nY - 1) * this.alienSpaceY + 10 * this.nY;
+    this.width = (this.nX - 1) * this.alienSpaceX + 22 * this.nX;
+    this.height = (this.nY - 1) * this.alienSpaceY + 16 * this.nY;
   }
 
   draw() {
@@ -33,7 +33,7 @@ class Swarm {
     if (this.x + dx + this.width >= boundaryRight
         || this.x + dx <= boundaryLeft) {
       this.direction *= -1;
-      this.moveY(30);
+      this.moveY(16);
     }
     this.x += dx;
     this.aliens.forEach(function(alienRow) {
@@ -55,14 +55,15 @@ class Swarm {
   spawn() {
     for (var ny = 0; ny < this.nY; ny++) {
       var aliensRow = [];
+      if (ny > 2) {
+        var alien_sprite = alien_tall;
+      } else {
+        var alien_sprite = alien_chub;
+      }
+      var spacingX = (this.width - this.nX * alien_sprite.width) / (this.nX - 1);
       for (var nx = 0; nx < this.nX; nx++) {
-        var x = this.x + nx * 10 + this.alienSpaceX * nx;
-        var y = this.y + ny * 10 + this.alienSpaceY * ny;
-        if (ny > 2) {
-          var alien_sprite = alien_tall;
-        } else {
-          var alien_sprite = alien_chub;
-        }
+        var x = this.x + nx * alien_sprite.width + spacingX * nx;
+        var y = this.y + ny * alien_sprite.height + this.alienSpaceY * ny;
         var alien = new Alien(x, y, alien_sprite);
         aliensRow.push(alien);
       }
