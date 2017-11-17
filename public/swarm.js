@@ -55,10 +55,12 @@ class Swarm {
   spawn() {
     for (var ny = 0; ny < this.nY; ny++) {
       var aliensRow = [];
-      if (ny > 2) {
+      if (ny > 3) {
         var alien_sprite = alien_tall;
-      } else {
+      } else if (ny > 1) {
         var alien_sprite = alien_chub;
+      } else {
+        var alien_sprite = alien_eyed;
       }
       var spacingX = (this.width - this.nX * alien_sprite.width) / (this.nX - 1);
       for (var nx = 0; nx < this.nX; nx++) {
